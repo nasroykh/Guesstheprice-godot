@@ -4,19 +4,19 @@
 [ext_resource path="res://gfx/IndieFlower-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://gfx/concrete-1646788_1920.jpg" type="Texture" id=3]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 size = 25
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 50
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 35
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 25
 font_data = ExtResource( 2 )
 
@@ -48,41 +48,41 @@ __meta__ = {
 }
 
 [node name="Attempts" type="Label" parent="VBoxContainer"]
-margin_top = 40.0
+margin_top = 20.0
 margin_right = 984.0
-margin_bottom = 78.0
-custom_fonts/font = SubResource( 4 )
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Attempts : 0/20"
 align = 2
 
 [node name="PlayerDisplay" type="Label" parent="VBoxContainer"]
-margin_top = 128.0
+margin_top = 108.0
 margin_right = 984.0
-margin_bottom = 279.0
+margin_bottom = 259.0
 rect_min_size = Vector2( 0, 151 )
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Try guessing the price
-(10 -> 10000)"
+(10$ -> 10000$)"
 align = 1
 valign = 1
 
 [node name="PlayerInput" type="LineEdit" parent="VBoxContainer"]
-margin_top = 329.0
+margin_top = 309.0
 margin_right = 984.0
-margin_bottom = 429.0
+margin_bottom = 409.0
 rect_min_size = Vector2( 0, 100 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 align = 1
 placeholder_text = "Type sumpthin hier !"
 placeholder_alpha = 0.428
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 479.0
+margin_top = 459.0
 margin_right = 984.0
-margin_bottom = 559.0
+margin_bottom = 539.0
 rect_min_size = Vector2( 0, 80 )
 custom_constants/separation = 50
 alignment = 1
@@ -92,7 +92,7 @@ margin_left = 267.0
 margin_right = 467.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 200, 80 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Replay"
 
 [node name="Enter" type="Button" parent="VBoxContainer/HBoxContainer"]
@@ -100,7 +100,7 @@ margin_left = 517.0
 margin_right = 717.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 200, 80 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Enter"
 [connection signal="text_entered" from="VBoxContainer/PlayerInput" to="." method="_on_LineEdit_text_entered"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Replay" to="." method="_on_Replay_pressed"]
